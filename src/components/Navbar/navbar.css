@@ -1,0 +1,19 @@
+.nav_container {
+    height: 70px;
+    background-color: #FF9933;
+}
+
+.imageLogo {
+    display: hidden;
+    width: 120px;
+    height: 80px;
+    position: absolute;
+}
+
+.brand {
+    margin-top: 1%;
+    font-weight: bolder;
+    font-size: x-large;
+    color: #ffffff;
+    position: relative;
+}

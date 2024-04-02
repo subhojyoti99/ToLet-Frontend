@@ -1,0 +1,32 @@
+.footer_ ul {
+    list-style-type: none;
+
+}
+
+.footer_ ul li a {
+    color: azure;
+    text-decoration: none;
+
+}
+
+.footer_ ul li a:hover {
+    color: black;
+}
+
+.footer-col-4 ul li .active {
+    text-decoration: underline;
+    color: blue;
+}
+
+
+
+.footer_hr {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: #b5b5b5;
+    height: 1px;
+    margin: 10px;
+}
+
+.copyright {
+    text-align: center;
+}
