@@ -3,10 +3,10 @@ import React from "react";
 const GlassmorphismCard = ({ title, description }) => {
   return (
     <div className="glass-card p-6 rounded-lg shadow-lg bg-white bg-opacity-10 hover:bg-opacity-60 transition duration-300 transform hover:scale-105 w-full md:w-72">
-      <h2 className="text-2xl font-semibold text-doorKnocker mb-4 transition-opacity hover:opacity-100">
+      <h2 className="text-2xl font-semibold text-doorKnocker mb-4 transition-opacity hover:opacity-100 cursor-pointer">
         {title}
       </h2>
-      <p className="text-doorKnocker transition-opacity hover:opacity-100">
+      <p className="text-doorKnocker transition-opacity hover:opacity-100 cursor-pointer">
         {description}
       </p>
     </div>

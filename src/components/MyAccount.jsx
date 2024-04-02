@@ -16,11 +16,17 @@ export const MyAccount = () => {
 
   const handleImageChange = async (e) => {
     try {
+      const file = e.target.files[0];
+      if (!file) {
+        console.error("No file selected");
+        return;
+      }
+
       const formData = new FormData();
-      formData.append("image", e.target.files[0]);
+      formData.append("image", file);
 
       setLoading(true);
-      const response = await axios.patch("/api/upload-image", formData, {
+      const response = await axios.put("/api/profile/upload-image", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -51,15 +57,32 @@ export const MyAccount = () => {
     <>
       <Sidebar />
       <div className="bg-white rounded grid grid-cols-2">
-        <img
-          src={`http://localhost:8080/uploads/${user.img_url}`}
-          className="rounded-2xl img-thumbnail d-block"
-          alt="profileImg"
-          onError={(e) => {
-            e.target.src = ProfileImg; // Replace with a placeholder image
-            e.target.onerror = null; // Prevent infinite loop
-          }}
-        />
+        <div className="d-flex flex-col flex-wrap content-around justify-between items-end">
+          <img
+            src={`http://localhost:8080/uploads/${user.img_url}`}
+            className="img-thumbnail d-block m-auto w-[400px] h-[400px] rounded"
+            alt="profileImg"
+            onError={(e) => {
+              e.target.src = ProfileImg; // Replace with a placeholder image
+              e.target.onerror = null; // Prevent infinite loop
+            }}
+          />
+          <input
+            class="block w-2/5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            id="file_input"
+            type="file"
+            onChange={handleImageChange}
+            accept="image/*" // Add this attribute to specify accepted file types
+          />
+
+          <button
+            disabled={loading}
+            type="submit"
+            className="w-1/5 bg-slate-600 hover:bg-slate-800 border-slate-600 hover:border-slate-800 text-sm border-4 text-white py-1 px-2 mt-3 float-right rounded"
+          >
+            Update DP
+          </button>
+        </div>
         <div>
           <span>We are sharing your data from our server...</span>
           <form className="m-10 p-6">

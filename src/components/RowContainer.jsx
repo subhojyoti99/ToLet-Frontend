@@ -34,7 +34,7 @@ const RowContainer = ({ scrollValue }) => {
   return (
     <div
       ref={rowContainer}
-      className="w-screen h-[375px] flex items-center gap-6 scroll-smooth  overflow-x-auto justify-start"
+      className="w-screen h-[375px] flex items-center gap-6 scroll-smooth overflow-x-auto justify-start pr-16"
       onWheel={handleWheelScroll}
     >
       {rooms &&
