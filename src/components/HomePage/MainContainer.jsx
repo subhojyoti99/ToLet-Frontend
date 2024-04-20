@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import RowContainer from "./RowContainer";
 import { HomeContainer } from "./HomeContainer";
-import { WeProvide } from "./WeProvide";
+import { WeProvide } from "../Our_Services/WeProvide";
 
 export const MainContainer = () => {
   const [scrollValue, setScrollValue] = useState(0);

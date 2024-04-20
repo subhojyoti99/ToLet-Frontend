@@ -60,10 +60,10 @@ export const Rooms = ({ flag, data, scrollValue }) => {
       <div className="flex flex-wrap ml-10 gap-16">
         {rooms &&
           rooms.map((item) => (
-            <Link to={`/room/${item.ID}`}>
+            <Link to={`/room/${item.ID}`} className="no-underline">
               <div
                 key={item?.ID}
-                className="w-275 h-[195px] min-w-[275px] md:w-300 md:min-w-[300px] bg-cardOverlay rounded-lg py-2 px-4 my-12 backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-evenly relative"
+                className="w-275 h-[210px] min-w-[275px] md:w-300 md:min-w-[300px] bg-cardOverlay rounded-lg py-2 px-4 my-12 backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-evenly relative"
               >
                 <div className="w-full flex items-center justify-between">
                   <motion.div

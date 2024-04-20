@@ -1,0 +1,20 @@
+.roommate-btn {
+    background-color: #3182ce;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    transition: transform 0.2s;
+  }
+  
+  .roommate-btn:hover {
+    transform: translateY(2px);
+  }
+  
+  .border-doorKnocker {
+    border-color: doorKnocker;
+  }

@@ -12,6 +12,7 @@ import Logo from "../../img/pngwing.com.png";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { TextField } from "@mui/material";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -94,10 +95,10 @@ export const NavbarComponent = () => {
           <Offcanvas.Body>
             <Nav className="justify-content-center flex-grow-1 pe-3">
               <Form className="absolute flex left-[43%]">
-                <Form.Control
-                  variant="outline-success"
+                <TextField
+                  variant="standard"
                   type="search"
-                  placeholder="Search"
+                  placeholder="Search..."
                   className="me-2"
                   aria-label="Search"
                 />
@@ -160,7 +161,22 @@ export const NavbarComponent = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/our-services"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Our Services
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/#"
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
@@ -175,7 +191,7 @@ export const NavbarComponent = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/#"
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"

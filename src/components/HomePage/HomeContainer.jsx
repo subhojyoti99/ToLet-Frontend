@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import gateBg from "../img/gate1.png";
-import HomeLock from "../img/lock.png";
-import { heroData } from "../utils/data.js";
+import gateBg from "../../img/gate1.png";
+import HomeLock from "../../img/lock.png";
+import { heroData } from "../../utils/data.js";
 import RowContainer from "./RowContainer.jsx";
-import { Rooms } from "./Room/Rooms.jsx";
+import { Rooms } from "../Room/Rooms.jsx";
 
 export const HomeContainer = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import axios from "../utils/axios";
-import HomeImg from "../img/rent1.png";
+import axios from "../../utils/axios";
+import HomeImg from "../../img/rent1.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 

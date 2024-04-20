@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import ProfileImg from "../img/avatar.png";
-import axios from "../utils/axios";
+import ProfileImg from "../../img/avatar.png";
+import axios from "../../utils/axios";
 import { Box, TextField } from "@mui/material";
-import { Sidebar } from "./Navbar/Sidebar";
+import { Sidebar } from "../Navbar/Sidebar";
 export const MyAccount = () => {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(false);

@@ -5,14 +5,20 @@ import './App.css';
 import { NavbarComponent } from './components/Navbar/Navbar';
 import { Register } from './components/Auth/Register';
 import { Login } from './components/Auth/Login';
-import { HomeContainer } from './components/HomeContainer';
+import { HomeContainer } from './components/HomePage/HomeContainer';
 import Footer from './components/Footer/Footer';
-import { MainContainer } from './components/MainContainer';
+import { MainContainer } from './components/HomePage/MainContainer';
 import React from "react";
 import AddNewRoom from './components/Admin/AddNewRoom';
 import { Rooms } from './components/Room/Rooms';
 import { RoomDetails } from './components/Room/RoomDetails';
-import { MyAccount } from './components/MyAccount';
+import { MyAccount } from './components/Account_Setting/MyAccount';
+import CloudKitchen from './components/CloudKitchen/CloudKitchen';
+import RoomMate from './components/RoomMate/RoomMate';
+import TiffinSystem from './components/TiffinSystem/TiffinSystem';
+import RoomWithFood from './components/RoomWithFood.jsx/RoomWithFood';
+import GlassmorphismCards from './components/Our_Services/GlassmorphismCard';
+import { NotFound } from './components/Junk/NotFound';
 
 function App() {
   return (
@@ -37,6 +43,12 @@ function App() {
               <Route path="/room-register" element={<AddNewRoom />} />
               <Route path="/rooms" element={<Rooms />} />
               <Route path='/room/:id' element={<RoomDetails />} />
+              <Route path='/cloud-kitchen' element={<CloudKitchen />} />
+              <Route path='/room-mate' element={<RoomMate />} />
+              <Route path='/tiffin-system' element={<TiffinSystem />} />
+              <Route path='/room-with-food' element={<RoomWithFood />} />
+              <Route path='/our-services' element={<GlassmorphismCards />} />
+              <Route path='/*' element={<NotFound />} />
 
               {/* <Route path='/' element={<HomeContainer />} /> */}
 
